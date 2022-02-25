@@ -1,0 +1,26 @@
+body {
+
+background-color: #86C6F4;
+}
+
+input {
+margin: 5px 50px;
+display: flex;
+align-items: center;
+border-radius:20%;
+
+}
+
+label {
+font-weight: bold;
+}
+
+button {
+border-radius: 30%;
+margin: 5px 50px;
+width: 200px;
+background: grey;
+font-weight: bold;
+
+}
+

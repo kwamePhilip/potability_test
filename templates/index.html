@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Water Potability</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+<div >
+    <h1>This algorithm predicts the potability of water</h1>
+
+    <h3>Gradient Boosting Classifier was selected to develop this machine learning model. </h3>
+
+    <h3>The dataset used contains nine water quality metrics from 3276 water bodies.</h3>
+
+
+    <h9><strong>Note!:</strong> This is a demo project and the authenticity of the data used to build this model has not been verified.
+    Therefore, do not utilize this model for any other application</h9>
+    <hr>
+      <form action="{{ url_for('predict')}}" method="post">
+          <label for="pH">pH (typical range 0.0 - 14.0) </label>
+    	<input type="number" id="pH" step="any" name="ph" placeholder="pH" required="required" /> <br>
+          <label for="hardness"> Hardness (typical range 47 - 323 mg/L) </label>
+        <input type="number" step="any" id="hardness" name="Hardness" placeholder="Hardness" required="required" /><br>
+          <label for="solids">Solids (typical range 320 - 61227 ppm)</label>
+		<input type="number" step="any" id="solids" name="Solids" placeholder="Solids" required="required" /><br>
+          <label for="chloramines">Chloramines (typical range 0.35 - 13 ppm) </label>
+        <input type="number" step="any" id="chloramines" name="Chloramines" placeholder="Chloramines" required="required" /><br>
+          <label for="sulfate"> Sulfate (typical range 129 - 481 ppm)</label>
+        <input type="number" step="any" id="sulfate" name="Sulfate" placeholder="Sulfate" required="required" /><br>
+          <label for="conductivity"> Conductivity (typical range 181 - 753 μS/cm)</label>
+        <input type="number" step="any" id="conductivity" name="Conductivity" placeholder="Conductivity" required="required" /><br>
+          <label for="organic_carbon"> Organic Carbon (typical range 2 - 28 ppm)</label>
+        <input type="number" step="any" id="organic_carbon" name="Organic_carbon" placeholder="Organic Carbon" required="required" /><br>
+          <label for="trihalomethanes"> Trihalomethanes (typical range 0.50 - 124 μg/L) </label>
+        <input type="number" step="any" id="trihalomethanes" name="Trihalomethanes" placeholder="Trihalomethanes" required="required" /> <br>
+          <label for="turbidity"> Turbidity (typical range 1.45 - 6.74 NTU)</label>
+        <input type="number" step="any" id="turbidity" name="Turbidity" placeholder="Turbidity" required="required" /> <br>
+
+        <button type="submit" >Predict</button>
+    </form>
+    <br>
+
+    <h2>Results: </h2>
+    <h1>   {{ final }} </h1>
+
+
+</div>
+</body>
+</html>
